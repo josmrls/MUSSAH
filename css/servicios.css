@@ -1,0 +1,194 @@
+.page-header {
+    padding: 160px 5% 80px;
+    text-align: center;
+    background: linear-gradient(to bottom, #111111, #0a0a0a);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--accent);
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-section {
+    padding: 80px 0;
+    background-color: var(--bg-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.service-card {
+    background: #141414;
+    padding: 50px 40px;
+    border: 1px solid #222;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-10px);
+    background: #1a1a1a;
+}
+
+.service-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    color: rgba(212, 175, 55, 0.05); /* Número gigante casi invisible */
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: var(--transition);
+}
+
+.service-card:hover .service-number {
+    color: rgba(212, 175, 55, 0.2);
+}
+
+.service-card h3 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* 3. Portfolio / Proyectos */
+.projects-section {
+    padding-bottom: 100px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 0.75rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.project-item {
+    position: relative;
+    height: 450px;
+    background-color: #000;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    filter: grayscale(100%);
+    transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+    transition: var(--transition);
+}
+
+.project-item:hover img {
+    opacity: 0.9;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+.project-overlay h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #fff;
+    transform: translateY(20px);
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.project-overlay p {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    transform: translateY(20px);
+    transition: var(--transition);
+    transition-delay: 0.1s;
+    opacity: 0;
+}
+
+.project-item:hover .project-overlay h4,
+.project-item:hover .project-overlay p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    .service-card {
+        padding: 30px;
+    }
+}

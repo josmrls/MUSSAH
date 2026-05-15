@@ -41,10 +41,10 @@ header {
     text-decoration: none; 
     color: white; 
     text-transform: uppercase; 
-    font-size: 0.75rem; 
+    font-size: 0.8rem; 
     letter-spacing: 2px; 
 }
-.nav-links a.active { color: var(--gold); }
+.nav-links a.active {color: var(--gold);}
 
 /* HERO SECCIÓN */
 .page-header {
@@ -175,7 +175,7 @@ header {
     50% { transform: translateY(-15px); } 
 }
 
-/* FOOTER INDEX */
+/* FOOTER */
 .main-footer {
     background-color: #050505; 
     padding: 40px 8% 30px;

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto & Inscripciones | MUSSAH</title>
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="img/logo_mussah.png" alt="MUSSAH Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="talento.html">Talento</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <div class="contact-container">
+            <!-- Columna de Información -->
+            <div class="contact-info">
+                <span class="gold-subtitle">Únete a nosotros</span>
+                <h1>Hagamos Historia</h1>
+                <div class="gold-line"></div>
+                <p class="contact-description">
+                    Ya seas un talento buscando representación o una marca buscando excelencia, estamos listos para elevar tu visión.
+                </p>
+
+                <div class="info-details">
+                    <div class="info-item">
+                        <h4>Management</h4>
+                        <p>management@mussah.agency</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Prensa & Media</h4>
+                        <p>press@mussah.agency</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Ubicación</h4>
+                        <p>Falcón, Venezuela.</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+
+                </div>
+            </div>
+
+            <!-- Columna del Formulario -->
+            <div class="form-container">
+                <form id="inscription-form">
+                    <div class="input-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" placeholder="Tu nombre artístico o legal" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" placeholder="email@ejemplo.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Categoría</label>
+                        <select required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="talento">Inscripción de Talento</option>
+                            <option value="cliente">Contratación de Servicios</option>
+                            <option value="prensa">Prensa / Media</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Link de Portfolio / Reel</label>
+                        <input type="url" placeholder="https://behance.net/tu-perfil">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Mensaje / Propuesta</label>
+                        <textarea rows="4" placeholder="Cuéntanos sobre tu proyecto o trayectoria..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Enviar Solicitud
+                        <span class="btn-shine"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <img src="img/logo_mussah.png" alt="MUSSAH" class="footer-logo-gold">
+                <p class="footer-tagline">Representación y Producción con visión de vanguardia.</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h4 class="footer-title">Asistencia</h4>
+                <ul>
+                    <li><a href="nosotros.html">FAQ</a></li>
+                    <li><a href="nosotros.html">Identidad</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4 class="footer-title">Contactos</h4>
+                <p>management@mussah.agency</p>
+                <div class="footer-socials">
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section footer-legal">
+                <h4 class="footer-title">Legal</h4>
+                <ul>
+                    <li><a href="nosotros.html">Privacidad</a></li>
+                    <li><a href="nosotros.html">Términos de Servicios</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MUSSAH Artistic Agency. <span class="champagne-text">Creatividad sin límites.</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios | MUSSAH</title>
+    <title>Servicios & Experiencia | MUSSAH</title>
     <link rel="stylesheet" href="/css/servicios.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -25,33 +25,117 @@
     </header>
 
     <section class="page-header">
-        <h1>Servicios & Experiencia</h1>
-        <p>Soluciones integrales para el ecosistema artístico.</p>
+        <div class="video-container">
+            <div class="video-overlay"></div>
+            <video autoplay muted loop playsinline class="header-video">
+                <source src="/img/servicios.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="header-content">
+            <span class="subtitle">Nuestra Oferta</span>
+            <h1>Servicios & Experiencia</h1>
+            <div class="gold-line"></div>
+            <p>Soluciones integrales para el ecosistema artístico y cultural,
+                desde la concepción hasta la avocación final.</p>
+        </div>
     </section>
 
-    <!-- FOOTER SERVICIOS -->
-    <footer class="footer-servicios">
-        <div class="footer-main">
-            <div class="footer-col">
-                <img src="logo_mussah.png" class="footer-logo-img" alt="MUSSAH">
-                <p>Agencia especializada en la representación y gestión de talento artístico.</p>
+    <section class="services-container">
+        <div class="services-grid">
+            <!-- Servicio1 -->
+            <div class="service-card">
+                <span class="number">01</span>
+                <h3>Management & Booking</h3>
+                <p>Representación estratégica de talentos. Gestionamos carreras artísticas con una visión
+                    comercial global y un enfoque humano</p>
             </div>
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <p>info@mussah.com</p>
-                <p>Falcón, VE</p>
+            <!-- Servicio2 -->
+            <div class="service-card">
+                <span class="number">02</span>
+                <h3>Producción Integral</h3>
+                <p>Creación y ejecución de eventos, espectáculos en vivo y proyectos audiovisuales bajo los más
+                    altos estándares de calidad</p>
             </div>
-            <div class="footer-col">
-                <h4>Siguenos</h4>
-                <div class="social-icons">
-                    <a href="#">IG</a>
+            <!-- Servicio3 -->
+            <div class="service-card">
+                <span class="number">03</span>
+                <h3>Consultoría Creativa</h3>
+                <p>Asesoramiento especializado en identidad de marca, curaduría de contenido y formación para el
+                    sector creativo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Portafolio -->
+    <section class="portafolio-section">
+        <div class="portafolio.intro">
+            <h2>Proyectos Destacados</h2>
+        </div>
+        <div class="portafolio-grid">
+            <div class="portafolio-item large">
+                <img src="/img/servicios2.jpg" alt="Evento 1">
+                <div class="project-info">
+                    <h4>Fashion Gala</h4>
+                    <span>Producción y Dirección</span>
+                </div>
+            </div>
+            <div class="portafolio-item">
+                <img src="/img/servicios1.jpg" alt="Evento 2">
+                <div class="project-info">
+                    <h4>Atemporal Tour</h4>
+                    <span>Management</span>
+                </div>
+            </div>
+            <div class="portafolio-item">
+                <img src="/img/servicios3.jpg" alt="Evento 3">
+                <div class="project-info">
+                    <h4>Exhibición Artística</h4>
+                    <span>Curaduría</span>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <img src="/img/logo_mussah.png" alt="MUSSAH" class="footer-logo-gold">
+                <p class="footer-tagline">Representación y Producción con visión de vanguardia.</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h4 class="footer-title">Asistencia</h4>
+                <ul>
+                    <li><a href="nosotros.html">FAQ</a></li>
+                    <li><a href="nosotros.html">Identidad</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-contact">
+                <h4 class="footer-title">Contactos</h4>
+                <p>management@mussah.agency</p>
+                <div class="footer-socials">
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section footer-legal">
+                <h4 class="footer-title">Legal</h4>
+                <ul>
+                    <li><a href="nosotros.html">Privacidad</a></li>
+                    <li><a href="nosotros.html">Términos de Servicios</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="footer-bottom">
-            &copy; 2026 MUSSAH Artistic Agency.
+            <p>&copy; 2026 MUSSAH Artistic Agency. <span class="champagne-text">Creatividad sin límites.</span></p>
         </div>
     </footer>
+
+    <!-- BOTÓN FLOTANTE -->
+    <a href="contacto.html" class="fab-button">
+        <span class="fab-text">Inscripciones</span>
+        <div class="fab-icon">| +</div>
+    </a>
 
 </body>
 </html>

@@ -317,9 +317,21 @@ header {
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
     /* HERO TEXT */
+    .hero {padding: 0 5%;}
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
     .hero-content h1 {
         font-size: 3rem;
         letter-spacing: 10px;
+        padding-left: 10px;
+        margin-bottom: 15px;
+        width: 100%;
     }
     .hero-content p {
         font-size: 0.8rem;
@@ -332,15 +344,6 @@ header {
     .footer-container {
         grid-template-columns: 1fr 1fr;
         gap: 40px 15px;
-    }
-    .footer-brand {
-        text-align: center;
-        margin-bottom: 20px;
-        grid-column: span 2;
-    }
-    .footer-brand .footer-logo-gold {
-        margin: 0 auto 20px;
-        height: 35px;
     }
     .footer-tagline {
         margin: 0 auto;
@@ -356,10 +359,6 @@ header {
     .footer-section a, .footer-contact p {
         font-size: 0.65rem;
     }
-    .footer-socials {
-        align-items: center;
-        gap: 8px;
-    }
     .footer-title {
         font-size: 0.75rem;
         margin-bottom: 15px;
@@ -373,10 +372,10 @@ header {
 /* Botón Flotante */
 .fab-button {
     position: fixed;
-    bottom: 40px; right: 50px;
+    bottom: 70px; right: 50px;
     background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728,#fbf5b7, #aa771c);
     color: #000;
-    padding: 14px 28px;
+    padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
     display: flex;

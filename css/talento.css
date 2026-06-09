@@ -184,11 +184,11 @@ header {
 /* BOTÓN FLOTANTE */
 .fab-button {
     position: fixed; 
-    bottom: 40px; 
-    right: 40px;
+    bottom: 70px; 
+    right: 50px;
     background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
     color: #000; 
-    padding: 14px 28px; 
+    padding: 10px 20px; 
     border-radius: 50px;
     text-decoration: none; 
     display: flex; 
@@ -274,6 +274,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-transform: uppercase;
 }
 
 /* Copyright Bottom */

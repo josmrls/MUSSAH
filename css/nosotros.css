@@ -91,7 +91,7 @@ header {
 }
 
 /* MANIFIESTO */
-.manifesto { padding: 120px 8%; }
+.manifesto { padding: 90px 8%; }
 .container { 
     max-width: 1200px; 
     margin: 0 auto; 
@@ -275,42 +275,128 @@ header {
     opacity: 0.6;
 }
 
-/* Responsivo para móviles */
-@media (max-width: 992px) {
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    /* HEADER Y NAV */
+    header {
+        position: fixed;
+        padding: 20px 5%;
+        background: rgba(0,0,0,0.5);
     }
-}
+    .logo img {height: 40px;}
 
-@media (max-width: 600px) {
-    .footer-container {
-        grid-template-columns: 1fr;
+    /* MENU TOGGLE */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        z-index: 3000;
+        position: relative;
+    }
+    .menu-toggle .bar {
+        width: 25px;
+        height: 2px;
+        background: white;
+        margin: 5px auto;
+        transition: 0.3s;
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 75%; height: 100vh;
+        background: rgba(0,0,0,0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        z-index: 2000;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .nav-links.active {
+        right: 0;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .nav-links a{ font-size: 1.2rem; letter-spacing: 5px;}
+    .nav-links li {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: 0.4s;    
+    }
+    .nav-links.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* HERO TEXT */
+    .page-header{height: 50vh;}
+    .header-content h1 {font-size: 2.8rem;}
+    
+    .manifesto {padding: 40px 5%;}
+    .manifesto-grid {grid-template-columns: 1fr; gap: 40px;}
+    .manifesto-text h2 {font-size: 2.5rem;}
+    .manifesto-text p {font-size: 1rem;}
+    .manifesto-image {order: -1;}
+
+    .pillars {
+        grid-template-columns: 1fr 1fr; 
+        gap: 40px 15px;
+        padding: 45px 8%;
+    }
+
+    /* FOOTER */
+    .main-footer {
+        padding: 60px 5% 30px;
         text-align: center;
     }
-    .footer-tagline {
-        margin: 0 auto 25px;
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 15px;
     }
-    .footer-logo-gold {
-        margin: 0 auto 25px;
+    .footer-tagline {
+        margin: 0 auto;
+        font-size: 0.7rem;
+        max-width: 280px;
+    }
+    .footer-section {
+        text-align: center;
+    }
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+    .footer-section a, .footer-contact p {
+        font-size: 0.65rem;
+    }
+    .footer-title {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+        letter-spacing: 3px;
+    }
+    .footer-bottom {
+        grid-column: span 2;
     }
 }
 
 /* Botón Flotante */
 .fab-button {
     position: fixed;
-    bottom: 40px; right: 50px;
+    bottom: 70px; right: 50px;
     background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728,#fbf5b7, #aa771c);
     color: #000;
-    padding: 14px 28px;
+    padding: 10px 20px;
     border-radius: 50px;
     text-decoration: none;
     display: flex;
     align-items: center;
     font-weight: 600;
     z-index: 1000;
-
-    font-family: 'Monserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -324,13 +410,10 @@ header {
 .fab-button::after {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -60%;
-    width: 20%;
-    height: 200%;
+    top: -50%; left: -60%;
+    width: 20%; height: 200%;
     background: rgba(255,255,255,0.5);
     transform: rotate(30deg);
-    transition: none;
     animation: glint 5s infinite;
 }
 @keyframes floatGlamour {
@@ -350,7 +433,6 @@ header {
 .fab-button:hover {
     transform: scale(1.1) translateY(-10px);
     box-shadow: 0 15px 40px rgba(212, 175, 55, 0.7);
-    color: #000;
     filter: brightness(1.1);
 }
 .fab-text {
